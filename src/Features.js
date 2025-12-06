@@ -8,7 +8,7 @@ export default function Features({ item, id }) {
   return (
     <>
       <div className="card-container">
-        <img src={`/${item.icon}`} alt={item.title} />
+        <img src={`${process.env.PUBLIC_URL}/${item.icon}`} alt={item.title} />
         <h2>{item.title}</h2>
         <p>{item.desc}</p>
       </div>
