@@ -1,0 +1,115 @@
+:root {
+  --color-primary: #005cb9;
+  --color-bg-light: #E8F9FF;
+  --color-warning: #ffce02;
+  --color-text-dark: #221F20;
+  --border-grey: #221F2029;
+  --fs-heading: 20px;
+  --fs-subtitle: 14px;
+  --fs-button: 16px;
+  --fw-bold: 700;
+  --fw-semi: 600;
+  --fw-regular: 400;
+  --radius-large: 12px;
+  --radius-medium: 8px;
+  --space-32: 32px;
+  --space-16: 16px;
+  --space-12: 12px;
+  --space-5: 5px;
+}
+
+.card-container {
+  border: 1px solid var(--border-grey);
+  border-radius: var(--radius-large);
+  padding: 16px 16px 43px 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.card-container h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+}
+.card-container p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #707070;
+}
+.card-container img {
+  max-width: 59px;
+  max-height: 59px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.arrowButtonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  margin-top: 23px;
+}
+.arrowButtonDiv button {
+  border-radius: 50%;
+  border: 1px solid var(--border-grey);
+  color: #adbacd;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  background: white;
+  font-size: 20px;
+}
+.arrowButtonDiv .arrow.active {
+  border-color: #005cb9;
+  color: #005cb9;
+}
+.arrowButtonDiv .arrow.disabled {
+  border-color: #ddd;
+  color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 90%;
+  padding-right: 24px;
+  border-radius: 8px;
+}
+
+@media (min-width: 993px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .card-container h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .card-container p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=features.css.map */

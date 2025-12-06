@@ -1,0 +1,85 @@
+:root {
+  --color-primary: #005cb9;
+  --color-bg-light: #E8F9FF;
+  --color-warning: #ffce02;
+  --color-text-dark: #221F20;
+  --border-grey: #221F2029;
+  --fs-heading: 20px;
+  --fs-subtitle: 14px;
+  --fs-button: 16px;
+  --fw-bold: 700;
+  --fw-semi: 600;
+  --fw-regular: 400;
+  --radius-large: 12px;
+  --radius-medium: 8px;
+  --space-32: 32px;
+  --space-16: 16px;
+  --space-12: 12px;
+  --space-5: 5px;
+}
+
+.promo-main-container {
+  background-color: var(--color-bg-light);
+  padding: 32px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+  border-radius: 12px;
+}
+.promo-main-container button {
+  padding: 16px 32px;
+  background-color: #005cb9;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.promo-flex-inner {
+  border-left: 2px solid #ffce02;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.promo-heading {
+  color: #005cb9;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.promo-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #221f20;
+}
+
+@media (min-width: 992px) {
+  .promo-card {
+    background-color: #eaf6ff;
+    padding: 20px;
+    border-radius: 12px;
+    grid-column: span 3;
+  }
+  .promo-main-container {
+    margin-top: 0px;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promo-heading {
+    font-size: 24px;
+  }
+  .promo-subtitle {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=promoCard.css.map */

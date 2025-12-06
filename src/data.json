@@ -1,0 +1,49 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "icon": "path12.png",
+      "title": "Quick & Secure Online Account Opening",
+      "desc": "Open your demat account in just 5 minutes with our paperless process"
+    },
+    {
+      "id": 2,
+      "icon": "group.png",
+      "title": "Multiple Financial Investment Options",
+      "desc": "Access stocks, commodities, derivatives, IPOs, mutual funds, and more"
+    },
+    {
+      "id": 3,
+      "icon": "research.png",
+      "title": "Access to Expert Research & Analysis",
+      "desc": "Enhance returns and lower risk by investing in various debt instruments"
+    },
+    {
+      "id": 4,
+      "icon": "money.png",
+      "title": "Low & Transparent Brokerage Charges",
+      "desc": "Enjoy competitive rates with no hidden fees"
+    },
+    {
+      "id": 5,
+      "icon": "trading.png",
+      "title": "Next-Gen Trading Platform & Tools",
+      "desc": "Use advanced tools like Option Chain for informed decisions"
+    },
+    {
+      "id": 6,
+      "icon": "branch.png",
+      "title": "PAN India Branch Support",
+      "desc": "Get assistance from our 000+ local branches across India"
+    }
+  ],
+  "promo": {
+    "titleBlocks": [
+      { "heading": "Leading", "sub": "Full-Service Broker" },
+      { "heading": "33,600 Cr.", "sub": "Asset Under Management" },
+      { "heading": "Strong", "sub": "Research Desk" },
+      { "heading": "SEBI-Registered", "sub": "Secure & Compliant" }
+    ],
+    "cta": "Get Started Now →"
+  }
+}

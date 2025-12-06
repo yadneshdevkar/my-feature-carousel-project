@@ -1,0 +1,74 @@
+@use "./styles/variables";
+
+@mixin flex-layout($flex-gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $flex-gap;
+}
+
+.promo-main-container {
+  background-color: var(--color-bg-light);
+  padding: 32px;
+  margin-top: 32px;
+  @include flex-layout(32px);
+  text-align: left;
+  border-radius: 12px;
+
+  button {
+    padding: 16px 32px;
+    background-color: #005cb9;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    align-self: flex-start;
+  }
+}
+
+.promo-flex-inner {
+  border-left: 2px solid #ffce02;
+  padding-left: 12px;
+  @include flex-layout(5px);
+}
+
+.promo-heading {
+  color: #005cb9;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.promo-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #221f20;
+}
+
+@media (min-width: 992px) {
+  .promo-card {
+    background-color: #eaf6ff;
+    padding: 20px;
+    border-radius: 12px;
+    grid-column: span 3;
+  }
+
+  .promo-main-container {
+    margin-top: 0px;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-heading {
+    font-size: 24px;
+  }
+
+    .promo-subtitle {
+    font-size: 18px;
+  }
+}
+
