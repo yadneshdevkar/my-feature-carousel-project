@@ -8,19 +8,22 @@ const FeaturesCarousel = ({ features }) => {
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
 
-    const updateButtons = () => {
-    setPrevDisabled(!emblaApi.canScrollPrev());
-    setNextDisabled(!emblaApi.canScrollNext());
-  };
-
-  
   useEffect(() => {
     if (!emblaApi) return;
+
+    const updateButtons = () => {
+      setPrevDisabled(!emblaApi.canScrollPrev());
+      setNextDisabled(!emblaApi.canScrollNext());
+    };
+
     updateButtons();
+
     emblaApi.on("select", updateButtons);
-  }, [emblaApi,updateButtons]);
 
-
+    return () => {
+      emblaApi.off("select", updateButtons);
+    };
+  }, [emblaApi]);
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
@@ -44,6 +47,7 @@ const FeaturesCarousel = ({ features }) => {
           >
             {"<"}
           </button>
+
           <button
             className={`arrow ${nextDisabled ? "disabled" : "active"}`}
             disabled={nextDisabled}
@@ -53,9 +57,11 @@ const FeaturesCarousel = ({ features }) => {
           </button>
         </div>
       </div>
+
       <PromoCard />
     </>
   );
 };
 
 export default FeaturesCarousel;
+
