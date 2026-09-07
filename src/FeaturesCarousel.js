@@ -8,16 +8,19 @@ const FeaturesCarousel = ({ features }) => {
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
 
+    const updateButtons = () => {
+    setPrevDisabled(!emblaApi.canScrollPrev());
+    setNextDisabled(!emblaApi.canScrollNext());
+  };
+
+  
   useEffect(() => {
     if (!emblaApi) return;
     updateButtons();
     emblaApi.on("select", updateButtons);
-  }, [emblaApi]);
+  }, [emblaApi,updateButtons]);
 
-  const updateButtons = () => {
-    setPrevDisabled(!emblaApi.canScrollPrev());
-    setNextDisabled(!emblaApi.canScrollNext());
-  };
+
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();

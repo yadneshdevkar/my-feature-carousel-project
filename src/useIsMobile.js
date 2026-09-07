@@ -6,7 +6,7 @@ function useIsMobile(breakpoint = 992) {
     const handleResize = () => setIsMobile(window.innerWidth <= breakpoint);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [breakpoint]);
   return isMobile;
 }
 

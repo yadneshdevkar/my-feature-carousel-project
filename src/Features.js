@@ -1,9 +1,7 @@
-import React from "react";
-import dataJson from "./data.json";
 import "./features.scss";
 
-export default function Features({ item, id }) {
-  const { features, promo } = dataJson;
+export default function Features({ item }) {
+
 
   return (
     <>
